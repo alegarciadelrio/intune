@@ -10,8 +10,6 @@ $TempFolder = [System.IO.Path]::GetTempPath()
 Start-Transcript -Append $TempFolder"IntuneDaxDeployment.txt"
 $destinationConfigFolder = "C:\Program Files (x86)\Microsoft Dynamics AX\50\Client\Bin\"
 $destinationShortcutFolder = "C:\users\public\desktop"
-#$destinationShortcutFolder = $env:OneDrive+"\Desktop\"
-#$destinationShortcutFolder = [Environment]::GetFolderPath([Environment+SpecialFolder]::Desktop)
 
 If ($Mode -eq “Install”) 
 {

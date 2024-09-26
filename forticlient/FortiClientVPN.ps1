@@ -11,14 +11,13 @@ Start-Transcript -Append $TempFolder"IntuneForticlientDeployment.txt"
 If ($Mode -eq “Install”) 
 {
     # Install FortiClient VPN
-    #Start-Process Msiexec.exe -Wait -ArgumentList '/i FortiClientVPN.msi REBOOT=ReallySuppress /qn'
     .\FortiClientVPN.msi REBOOT=ReallySuppress /qn /log $TempFolder\FortiClientDeploy.txt
     Start-Sleep 200
 
     # Install VPN Profiles
     if((Test-Path -LiteralPath "HKLM:\SOFTWARE\Fortinet\FortiClient\Sslvpn\Tunnels\VPN") -ne $true) {  New-Item "HKLM:\SOFTWARE\Fortinet\FortiClient\Sslvpn\Tunnels\VPN" -force -ea SilentlyContinue };
     New-ItemProperty -LiteralPath 'HKLM:\SOFTWARE\Fortinet\FortiClient\Sslvpn\Tunnels\VPN' -Name 'Description' -Value 'VPN to connect Test' -PropertyType String -Force -ea SilentlyContinue;
-    New-ItemProperty -LiteralPath 'HKLM:\SOFTWARE\Fortinet\FortiClient\Sslvpn\Tunnels\VPN' -Name 'Server' -Value 'vpn.Test.com.au' -PropertyType String -Force -ea SilentlyContinue;
+    New-ItemProperty -LiteralPath 'HKLM:\SOFTWARE\Fortinet\FortiClient\Sslvpn\Tunnels\VPN' -Name 'Server' -Value 'vpn.Test.com' -PropertyType String -Force -ea SilentlyContinue;
     New-ItemProperty -LiteralPath 'HKLM:\SOFTWARE\Fortinet\FortiClient\Sslvpn\Tunnels\VPN' -Name 'promptusername' -Value 1 -PropertyType DWord -Force -ea SilentlyContinue;
     New-ItemProperty -LiteralPath 'HKLM:\SOFTWARE\Fortinet\FortiClient\Sslvpn\Tunnels\VPN' -Name 'promptcertificate' -Value 0 -PropertyType DWord -Force -ea SilentlyContinue;
     New-ItemProperty -LiteralPath 'HKLM:\SOFTWARE\Fortinet\FortiClient\Sslvpn\Tunnels\VPN' -Name 'ServerCert' -Value '0' -PropertyType String -Force -ea SilentlyContinue;
