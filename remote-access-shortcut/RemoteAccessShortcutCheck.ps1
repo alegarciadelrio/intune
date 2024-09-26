@@ -1,5 +1,5 @@
 ﻿$shortcutToCheck = "C:\users\public\desktop\Test Remote Access.lnk"
-$argumentToCheck = "https://rds.Test.com.au/rdweb"
+$argumentToCheck = "https://rds.test.com/rdweb"
 
 $sh = New-Object -COM WScript.Shell
 $arguments = $sh.CreateShortcut($shortcutToCheck).Arguments
