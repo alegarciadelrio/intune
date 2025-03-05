@@ -2,6 +2,10 @@
 
 Examples of program parameters in intune. 
 
+<p>
+  <img alt="PowerShell" src="https://img.shields.io/badge/PowerShell-black?style=flat-square&logoColor=white" />
+</p>
+
 ## For example to install DotNet 3.5, you should set this in "Install Command":
 powershell.exe -ExecutionPolicy Bypass -file installDotNet35.ps1 -Mode Install
 
