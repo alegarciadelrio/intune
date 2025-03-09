@@ -9,10 +9,14 @@ Examples of program parameters in intune.
 ## Table of Contents
 - [Overview](#overview)
 - [Requirements](#requirements)
+- [Getting Started](#getting-started)
 - [Repository Structure](#repository-structure)
 - [Usage](#usage)
   - [Installing .NET Framework 3.5](#installing-net-framework-35)
   - [Installing PDF Editor](#installing-pdf-editor)
+- [Troubleshooting](#troubleshooting)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Overview
 This repository contains a collection of scripts and examples for Microsoft Intune deployment. It provides ready-to-use PowerShell scripts for common deployment scenarios and demonstrates how to configure installation parameters, uninstallation commands, and detection rules.
@@ -107,3 +111,108 @@ To deploy a PDF editor application using Intune:
 **Uninstall Command:**
 ```
 "C:\Program Files (x86)\Icecream PDF Editor\unins000.exe" /VERYSILENT /NORESTART
+```
+
+## Getting Started
+
+### Using This Repository with Intune
+
+1. **Clone or download this repository**
+   ```
+   git clone https://github.com/yourusername/intune-toolbox.git
+   ```
+   Or download as a ZIP file and extract it.
+
+2. **Prepare your deployment package**
+   - For each script you want to deploy, create a new Win32 app in Intune
+   - Include the script and any required files (e.g., configuration files, installers)
+   - Use the commands provided in each folder's README for installation and uninstallation
+   - Configure detection rules as specified in the documentation
+
+3. **Test your deployment**
+   - Deploy to a test group before rolling out to production
+   - Verify that installation, detection, and uninstallation work as expected
+
+4. **Deploy to your organization**
+   - Assign the app to the appropriate groups in your organization
+   - Monitor deployment status through the Intune portal
+
+### Package Structure for Intune Deployment
+
+When creating an Intune package, ensure it includes:
+- The main PowerShell script (e.g., `installDotNet35.ps1`)
+- Any supporting files referenced by the script
+- Any required installers or binaries
+
+## Troubleshooting
+
+### Common Issues
+
+#### Script Execution Policy Errors
+If you encounter script execution policy errors, ensure your install command includes `-ExecutionPolicy Bypass`.
+
+#### Detection Rule Failures
+If Intune reports that the app is not installed despite successful installation:
+- Verify that the detection method is correctly configured
+- Check if the detection script is returning the expected exit code
+- Ensure registry keys or file paths used for detection exist on the target system
+
+#### Installation Failures
+If installation fails:
+- Check the logs in the temp folder (`%temp%`) for error messages
+- Verify that all prerequisites are installed
+- Ensure the target system meets the minimum requirements
+
+#### Uninstallation Issues
+If uninstallation fails:
+- Check if the application is running during uninstallation
+- Verify that the uninstall command is correct
+- Check logs for specific error messages
+
+## Contributing
+
+Contributions to this repository are welcome! Here's how you can contribute:
+
+1. **Fork the repository**
+2. **Create a feature branch**
+   ```
+   git checkout -b feature/your-feature-name
+   ```
+3. **Make your changes**
+4. **Test your changes** to ensure they work as expected
+5. **Submit a pull request** with a clear description of your changes
+
+### Contribution Guidelines
+
+- Follow the existing code style and naming conventions
+- Include detailed comments in your scripts
+- Update the README.md files with any necessary information
+- Test your scripts thoroughly before submitting
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+```
+MIT License
+
+Copyright (c) 2025 Your Organization
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
