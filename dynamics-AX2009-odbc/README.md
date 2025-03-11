@@ -2,12 +2,12 @@
 
 This folder contains scripts for configuring ODBC connections required for Microsoft Dynamics AX 2009 through Microsoft Intune.
 
-## Contents
+## 📋 Contents
 
 - `DynamicsAX2009ODBC.ps1`: PowerShell script for creating and removing ODBC connections
 - `DynamicsAX2009ODBCCheck.ps1`: PowerShell script for detection rule verification
 
-## Script Details
+## 📝 Script Details
 
 ### DynamicsAX2009ODBC.ps1
 
@@ -42,7 +42,7 @@ During uninstallation, the script:
 
 This script provides detection methods for Microsoft Intune to verify successful installation of the ODBC connection. It checks for the existence of the configured DSN and returns appropriate exit codes.
 
-## Usage in Intune
+## 🚀 Usage in Intune
 
 ### Install Command
 

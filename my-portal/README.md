@@ -2,13 +2,13 @@
 
 This folder contains scripts for deploying and configuring the myPortal communications client through Microsoft Intune.
 
-## Contents
+## 📋 Contents
 
 - `MyPortalSetup.ps1`: PowerShell script for installing and uninstalling the myPortal communications client
 - `myPortal.jar`: Java application file for the myPortal client
 - `CommunicationsClients.exe`: Installer for the Communications Clients package (not included in repository)
 
-## Script Details
+## 📝 Script Details
 
 ### MyPortalSetup.ps1
 
@@ -39,7 +39,7 @@ During uninstallation, the script:
 - Deploys the Java-based myPortal client
 - Complete cleanup during uninstallation
 
-## Usage in Intune
+## 🚀 Usage in Intune
 
 ### Install Command
 
@@ -64,7 +64,7 @@ Check for the existence of the file: `C:\Program Files (x86)\CommunicationsClien
 - Java Runtime Environment (JRE) must be installed
 - CommunicationsClients.exe and myPortal.jar must be included in the Intune package
 
-## Notes
+## 📌 Notes
 
 - The myPortal client is a Java-based application for unified communications
 - The installation process includes a 5-minute wait to ensure the Communications Clients package is fully installed

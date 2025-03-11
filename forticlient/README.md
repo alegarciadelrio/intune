@@ -2,12 +2,12 @@
 
 This folder contains scripts for deploying and configuring FortiClient VPN software through Microsoft Intune.
 
-## Contents
+## 📋 Contents
 
 - `FortiClientVPN.ps1`: PowerShell script for installing, configuring, and uninstalling FortiClient VPN
 - `FortiClientVPN.msi`: FortiClient VPN installer package (not included in repository)
 
-## Script Details
+## 📝 Script Details
 
 ### FortiClientVPN.ps1
 
@@ -45,7 +45,7 @@ During uninstallation, the script:
 - Preconfigured VPN profile for quick deployment
 - Complete cleanup during uninstallation
 
-## Usage in Intune
+## 🚀 Usage in Intune
 
 ### Install Command
 
@@ -69,7 +69,7 @@ Registry key: `HKEY_LOCAL_MACHINE\SOFTWARE\Fortinet\FortiClient\Sslvpn\Tunnels\V
 - Administrative privileges
 - FortiClientVPN.msi must be included in the Intune package
 
-## Notes
+## 📌 Notes
 
 - The FortiClient VPN software is configured to connect to "vpn.Test.com" by default
 - Users will be prompted for their username when connecting

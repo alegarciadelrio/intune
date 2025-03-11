@@ -2,13 +2,13 @@
 
 This folder contains scripts for deploying and managing remote access shortcuts through Microsoft Intune.
 
-## Contents
+## 📋 Contents
 
 - `RemoteAccessShortcut.ps1`: PowerShell script for creating and removing remote access shortcuts
 - `RemoteAccessShortcutCheck.ps1`: PowerShell script for detection rule verification
 - `Test Remote Access.lnk`: Preconfigured shortcut file for remote access
 
-## Script Details
+## 📝 Script Details
 
 ### RemoteAccessShortcut.ps1
 
@@ -44,7 +44,7 @@ This script provides detection methods for Microsoft Intune to verify successful
 
 - `Test Remote Access.lnk`: Preconfigured shortcut that points to remote access tools or resources
 
-## Usage in Intune
+## 🚀 Usage in Intune
 
 ### Install Command
 
@@ -68,7 +68,7 @@ Use the `RemoteAccessShortcutCheck.ps1` script as a custom detection rule in Int
 - Administrative privileges
 - The target of the shortcut (remote access tool) should be installed or accessible
 
-## Notes
+## 📌 Notes
 
 - The shortcut is deployed to the public desktop, making it available to all users on the device
 - The shortcut provides quick access to remote access tools or resources

@@ -6,7 +6,7 @@
 
 Examples of program parameters in intune.
 
-## Table of Contents
+## 📋 Table of Contents
 - [Overview](#overview)
 - [Requirements](#requirements)
 - [Getting Started](#getting-started)
@@ -18,16 +18,16 @@ Examples of program parameters in intune.
 - [Contributing](#contributing)
 - [License](#license)
 
-## Overview
+## 🔍 Overview
 This repository contains a collection of scripts and examples for Microsoft Intune deployment. It provides ready-to-use PowerShell scripts for common deployment scenarios and demonstrates how to configure installation parameters, uninstallation commands, and detection rules.
 
-## Requirements
+## ✅ Requirements
 - Microsoft Intune subscription
 - Windows 10/11 devices managed by Intune
 - PowerShell 5.1 or higher
 - Administrative privileges on target devices
 
-## Repository Structure
+## 📁 Repository Structure
 This repository is organized into several folders, each containing scripts for specific deployment scenarios:
 
 - **dot-net-35**: 
@@ -81,7 +81,7 @@ This repository is organized into several folders, each containing scripts for s
   - `RemoteAccessShortcutCheck.ps1` provides detection methods for Intune to verify successful deployment
   - Supports clean removal of shortcuts during uninstallation
 
-## Usage
+## 🚀 Usage
 Below are examples of how to use the scripts in this repository with Microsoft Intune.
 
 ### Installing .NET Framework 3.5
@@ -113,7 +113,7 @@ To deploy a PDF editor application using Intune:
 "C:\Program Files (x86)\Icecream PDF Editor\unins000.exe" /VERYSILENT /NORESTART
 ```
 
-## Getting Started
+## 🏁 Getting Started
 
 ### Using This Repository with Intune
 
@@ -144,7 +144,7 @@ When creating an Intune package, ensure it includes:
 - Any supporting files referenced by the script
 - Any required installers or binaries
 
-## Troubleshooting
+## 🔧 Troubleshooting
 
 ### Common Issues
 
@@ -169,7 +169,7 @@ If uninstallation fails:
 - Verify that the uninstall command is correct
 - Check logs for specific error messages
 
-## Contributing
+## 👥 Contributing
 
 Contributions to this repository are welcome! Here's how you can contribute:
 
@@ -189,7 +189,7 @@ Contributions to this repository are welcome! Here's how you can contribute:
 - Update the README.md files with any necessary information
 - Test your scripts thoroughly before submitting
 
-## License
+## ⚖️ License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 

@@ -2,11 +2,11 @@
 
 This folder contains scripts for deploying Microsoft Dynamics AX 2009 ERP system through Microsoft Intune.
 
-## Contents
+## 📋 Contents
 
 - `install.ps1`: PowerShell script for installing and uninstalling Microsoft Dynamics AX 2009 and its required components
 
-## Script Details
+## 📝 Script Details
 
 The `install.ps1` script handles the complete deployment of Microsoft Dynamics AX 2009, including all required components and prerequisites. It's designed to be deployed through Microsoft Intune and provides comprehensive logging for troubleshooting.
 
@@ -44,7 +44,7 @@ During uninstallation, the script:
 - Predefined configuration for quick deployment
 - Complete cleanup during uninstallation
 
-## Usage in Intune
+## 🚀 Usage in Intune
 
 ### Install Command
 

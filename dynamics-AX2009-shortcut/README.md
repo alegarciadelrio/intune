@@ -2,14 +2,14 @@
 
 This folder contains scripts for creating and managing desktop shortcuts for Microsoft Dynamics AX 2009 through Microsoft Intune.
 
-## Contents
+## 📋 Contents
 
 - `DynamicsAX2009Shortcut.ps1`: PowerShell script for creating and removing shortcuts and configuration files
 - `DynamicsAX2009ShortcutCheck.ps1`: PowerShell script for detection rule verification
 - `AX09-Prod64.axc`: Dynamics AX 2009 configuration file
 - `AX2009-Production.lnk`: Preconfigured shortcut file
 
-## Script Details
+## 📝 Script Details
 
 ### DynamicsAX2009Shortcut.ps1
 
@@ -48,7 +48,7 @@ This script provides detection methods for Microsoft Intune to verify successful
 - `AX09-Prod64.axc`: Contains connection settings for the Dynamics AX 2009 Production environment
 - `AX2009-Production.lnk`: Preconfigured shortcut that points to the Dynamics AX 2009 client with the Production configuration
 
-## Usage in Intune
+## 🚀 Usage in Intune
 
 ### Install Command
 

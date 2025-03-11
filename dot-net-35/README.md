@@ -2,11 +2,11 @@
 
 This folder contains scripts for deploying and managing .NET Framework 3.5 on Windows devices through Microsoft Intune.
 
-## Contents
+## 📋 Contents
 
 - `installDotNet35.ps1`: PowerShell script for enabling or disabling .NET Framework 3.5
 
-## Script Details
+## 📝 Script Details
 
 The `installDotNet35.ps1` script uses Windows Optional Features to manage the .NET Framework 3.5 installation. It supports both installation and uninstallation modes and is designed to be deployed through Microsoft Intune.
 
@@ -22,7 +22,7 @@ The `installDotNet35.ps1` script uses Windows Optional Features to manage the .N
 - Uses native Windows PowerShell cmdlets for feature management
 - Compatible with Windows 10 and Windows 11
 
-## Usage in Intune
+## 🚀 Usage in Intune
 
 ### Install Command
 
