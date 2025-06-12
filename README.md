@@ -14,6 +14,7 @@ Examples of program parameters in intune.
 - [Usage](#usage)
   - [Installing .NET Framework 3.5](#installing-net-framework-35)
   - [Installing PDF Editor](#installing-pdf-editor)
+  - [Active Directory Management](#active-directory-management)
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
 - [License](#license)
@@ -29,6 +30,13 @@ This repository contains a collection of scripts and examples for Microsoft Intu
 
 ## 📁 Repository Structure
 This repository is organized into several folders, each containing scripts for specific deployment scenarios:
+
+- **active-directory**: 
+  - Contains PowerShell scripts for Active Directory and Azure AD user management
+  - `CreateAccount.ps1` - Creates new user accounts in AD and Azure AD with parameterized inputs
+  - `DisableAccount.ps1` - Disables or archives user accounts when employees leave
+  - Supports both interactive and automated execution with parameters
+  - Provides comprehensive error handling and logging
 
 - **dot-net-35**: 
   - Contains the `installDotNet35.ps1` script for enabling or disabling .NET Framework 3.5 on Windows devices
@@ -111,6 +119,46 @@ To deploy a PDF editor application using Intune:
 **Uninstall Command:**
 ```
 "C:\Program Files (x86)\Icecream PDF Editor\unins000.exe" /VERYSILENT /NORESTART
+```
+
+### Active Directory Management
+To manage Active Directory user accounts using PowerShell scripts:
+
+#### Creating a New User Account
+**Script:** `CreateAccount.ps1`
+
+**Parameters:**
+```powershell
+# Required parameters
+-Username "John.Smith"          # User's login name
+-Email "john.smith@company.com" # User's email address
+-FirstName "John"              # User's first name
+-LastName "Smith"              # User's last name
+
+# Optional parameters
+-Description "Marketing Specialist"  # Job description
+-Office "Sydney Office"              # Office location
+-Telephone "(02) 1234 5678"          # Phone number
+-Title "Marketing Specialist"        # Job title
+-Department "Marketing"              # Department
+-Company "Birch & Waite"             # Company name (default)
+```
+
+**Example Usage:**
+```powershell
+# Interactive mode (will prompt for required fields)
+powershell.exe -ExecutionPolicy Bypass -File CreateAccount.ps1
+
+# Automated mode with parameters
+powershell.exe -ExecutionPolicy Bypass -File CreateAccount.ps1 -Username "John.Smith" -Email "john.smith@company.com" -FirstName "John" -LastName "Smith" -Title "Marketing Specialist" -Department "Marketing"
+```
+
+#### Disabling a User Account
+**Script:** `DisableAccount.ps1`
+
+**Example Usage:**
+```powershell
+powershell.exe -ExecutionPolicy Bypass -File DisableAccount.ps1
 ```
 
 ## 🏁 Getting Started
